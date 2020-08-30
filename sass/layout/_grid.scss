@@ -1,0 +1,38 @@
+.row {
+    max-width: $grid-width;// std used with grids, max width to make it responsive
+    margin: 0 auto; //trick to center a block element inside anothr block element, the browse will calc the left and right margin and center the element accordingly
+    // background-color: #eee;    
+
+    &:not(:last-child) {
+        margin-bottom: $vertical-gutters;
+    }
+
+    @include clearfix;
+
+    .col-1-of-2{
+        width: calc((100% - #{$horizontal-gutter})/2);
+        background-color: orangered;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $horizontal-gutter;
+        }
+    }
+
+    [class^="col-"] {
+        background-color: orangered;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $horizontal-gutter;
+        }
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 2*#{$horizontal-gutter})/3);
+    }
+
+    .col-2-of-3 {
+        width: calc(2*(calc((100% - 2*#{$horizontal-gutter})/3)) + #{$horizontal-gutter});
+    }
+}

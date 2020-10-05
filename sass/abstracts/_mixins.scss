@@ -5,3 +5,10 @@
         clear: both; //clear out both the left and right float
     }
 }
+
+@mixin center-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

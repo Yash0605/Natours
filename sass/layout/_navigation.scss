@@ -4,12 +4,12 @@
   }
 
   &_button {
-    height: 7rem;
-    width: 7rem;
+    height: 6.5rem;
+    width: 6.5rem;
     background-color: $color-white;
     border-radius: 50%;
-    top: 6rem;
-    right: 6rem;
+    top: 4rem;
+    right: 4rem;
     position: fixed;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.4);
@@ -21,8 +21,8 @@
     position: fixed;
     height: 6rem;
     width: 6rem;
-    top: 6.5rem;
-    right: 6.5rem;
+    top: 4.5rem;
+    right: 4.5rem;
     background-image: radial-gradient(
       $color-primary-light,
       $color-primary-dark
@@ -137,5 +137,19 @@
 
   &_button:hover &_icon::after {
     top: 1rem;
+  }
+
+  &_checkbox:checked + &_button &_icon {
+    background-color: transparent;
+  }
+
+  &_checkbox:checked + &_button &_icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &_checkbox:checked + &_button &_icon::before {
+    top: 0;
+    transform: rotate(135deg);
   }
 }

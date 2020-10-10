@@ -7,6 +7,11 @@
         margin-bottom: $vertical-gutters;
     }
 
+    @include respond(tab-por) {
+        margin-bottom: $vertical-gutters-small;
+        max-width: 50rem;
+    }
+
     @include clearfix;
 
     .col-1-of-2{
@@ -25,6 +30,14 @@
         &:not(:last-child) {
             // background-color: orangered;
             margin-right: $horizontal-gutter;
+
+            @include respond(tab-por) {
+                margin-bottom: $vertical-gutters-small;
+                margin-right: 0;
+            }
+        }
+        @include respond(tab-por) {
+            width: 100% !important;
         }
     }
 

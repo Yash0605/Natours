@@ -9,9 +9,29 @@
 }
 
 html {
-  font-size: 10px; // This defines what 1 rem is
+  font-size: 62.5%; // This defines what 1 rem is which is 10px in this case
+
+  //unnecessary since portrait version have the same style hence commented
+  // @include respond(phone) {
+  //   font-size: 50%;
+  // }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px
+  }
+  @include respond(tab-por) {
+    font-size: 50%; // 1rem = 8px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-por) {
+    padding: 0;
+  }
 }

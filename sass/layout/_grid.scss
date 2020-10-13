@@ -5,11 +5,15 @@
 
     &:not(:last-child) {
         margin-bottom: $vertical-gutters;
+
+        @include respond(tab-por) {
+            margin-bottom: $vertical-gutters-small;
+        }
     }
 
     @include respond(tab-por) {
-        margin-bottom: $vertical-gutters-small;
         max-width: 50rem;
+        padding: 0 3rem;
     }
 
     @include clearfix;

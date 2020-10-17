@@ -67,18 +67,30 @@
     border-top-right-radius: 3px;
 
     &_1 {
-      background-image: linear-gradient( to right bottom, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8)),
-       url(../img/nat-5.jpg);
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary-light, 0.8),
+          rgba($color-secondary-dark, 0.8)
+        ),
+        url(../img/nat-5.jpg);
     }
 
     &_2 {
-      background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
-       url(../img/nat-6.jpg);
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.8),
+          rgba($color-primary-dark, 0.8)
+        ),
+        url(../img/nat-6.jpg);
     }
 
     &_3 {
-      background-image: linear-gradient( to right bottom, rgba($color-tertiary-light, 0.8), rgba($color-tertiary-dark, 0.8)),
-       url(../img/nat-7.jpg);
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.8),
+          rgba($color-tertiary-dark, 0.8)
+        ),
+        url(../img/nat-7.jpg);
     }
   }
 
@@ -100,13 +112,25 @@
     box-decoration-break: clone;
 
     &_1 {
-      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.85), rgba($color-secondary-dark, 0.85));
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
     }
     &_2 {
-      background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.85), rgba($color-primary-dark, 0.85));
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
     }
     &_3 {
-      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.85), rgba($color-tertiary-dark, 0.85));
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
     }
   }
 
@@ -133,7 +157,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 90%;
     text-align: center;
   }
@@ -151,5 +175,81 @@
   &_price_value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  @include respond(tab-por) {
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
+    background-color: $color-white;
+
+    &_side {
+      height: auto;
+      position: relative;
+      width: 100%;
+      box-shadow: none;
+
+      &_back {
+        transform: rotateY(0);
+        -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+        clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+
+        &_1 {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.8),
+            rgba($color-secondary-dark, 0.8)
+          );
+        }
+
+        &_2 {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+          );
+        }
+
+        &_3 {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-tertiary-light, 0.8),
+            rgba($color-tertiary-dark, 0.8)
+          );
+        }
+      }
+    }
+
+    &:hover &_side_front {
+      transform: rotateY(0);
+    }
+
+    &_details {
+      padding: 1rem 3rem;
+    }
+
+    &_cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &_price_box {
+      color: $color_white;
+      margin-bottom: 3rem;
+    }
+
+    &_price_only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &_price_value {
+      font-size: 4rem;
+      font-weight: 300;
+    }
   }
 }

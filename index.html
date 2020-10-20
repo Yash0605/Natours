@@ -16,9 +16,8 @@
 </head>
 
 <body>
-
   <div class="navigation">
-    <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
+    <input type="checkbox" class="navigation_checkbox" id="navi-toggle" />
     <label for="navi-toggle" class="navigation_button">
       <span class="navigation_icon">&nbsp;</span>
     </label>
@@ -28,11 +27,21 @@
 
     <nav class="navigation_nav">
       <ul class="navigation_list">
-        <li class="navigation_item"><a href="#" class="navigation_link"><span>01</span> Natours</a></li>
-        <li class="navigation_item"><a href="#" class="navigation_link"><span>02</span>Your Benefits</a></li>
-        <li class="navigation_item"><a href="#" class="navigation_link"><span>03</span>Popular Tours</a></li>
-        <li class="navigation_item"><a href="#" class="navigation_link"><span>04</span>Stories</a></li>
-        <li class="navigation_item"><a href="#" class="navigation_link"><span>05</span>Book Now</a></li>
+        <li class="navigation_item">
+          <a href="#" class="navigation_link"><span>01</span> Natours</a>
+        </li>
+        <li class="navigation_item">
+          <a href="#" class="navigation_link"><span>02</span>Your Benefits</a>
+        </li>
+        <li class="navigation_item">
+          <a href="#" class="navigation_link"><span>03</span>Popular Tours</a>
+        </li>
+        <li class="navigation_item">
+          <a href="#" class="navigation_link"><span>04</span>Stories</a>
+        </li>
+        <li class="navigation_item">
+          <a href="#" class="navigation_link"><span>05</span>Book Now</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -100,9 +109,21 @@
         </div>
         <div class="col-1-of-2">
           <div class="composition">
-            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition_photo composition_photo_p1" />
+            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+              sizes="(max-width:900px) 20vw, (max-width:37.5em) 30vw, 300px" src="img/nat-1-large.jpg" alt="Photo 1"
+              class="composition_photo composition_photo_p1" />
+
+            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+              sizes="(max-width:900px) 20vw, (max-width:37.5em) 30vw, 300px" src="img/nat-2-large.jpg" alt="Photo 2"
+              class="composition_photo composition_photo_p2" />
+
+            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+              sizes="(max-width:900px) 20vw, (max-width:37.5em) 30vw, 300px" src="img/nat-3-large.jpg" alt="Photo 3"
+              class="composition_photo composition_photo_p3" />
+
+            <!-- <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition_photo composition_photo_p1" />
             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition_photo composition_photo_p2" />
-            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition_photo composition_photo_p3" />
+            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition_photo composition_photo_p3" /> -->
           </div>
         </div>
       </div>
@@ -364,10 +385,12 @@
   <!-- Adding the footer section for the page -->
   <footer class="footer">
     <div class="footer_logo-box">
-
       <picture class="footer_logo">
-        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width:37.5em)">
-          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Logo of the Page" >
+        <source srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            " media="(max-width:37.5em)" />
+        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Logo of the Page" />
       </picture>
 
       <!-- <img src="img/logo-green-2x.png" alt="Logo of the Page" class="footer_logo"> -->
@@ -377,17 +400,30 @@
       <div class="col-1-of-2">
         <div class="footer_navigation">
           <ul class="footer_list">
-            <li class="footer_item"><a href="#" class="footer_link">Company</a></li>
-            <li class="footer_item"><a href="#" class="footer_link">Contact us</a></li>
-            <li class="footer_item"><a href="#" class="footer_link">Careers</a></li>
-            <li class="footer_item"><a href="#" class="footer_link">Privacy Policy</a></li>
-            <li class="footer_item"><a href="#" class="footer_link">Terms</a></li>
+            <li class="footer_item">
+              <a href="#" class="footer_link">Company</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer_link">Contact us</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer_link">Careers</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer_link">Privacy Policy</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer_link">Terms</a>
+            </li>
           </ul>
         </div>
       </div>
       <div class="col-1-of-2">
         <p class="footer_copyright">
-          Built my <a href="#" class="footer_link">Yash</a>, following an online course taught by Jonas S. This can be 100% used for personal and professional uses as long as the author is credited for the design, Copyright &copy; <a href="#" class="footer_link">yash</a>
+          Built my <a href="#" class="footer_link">Yash</a>, following an
+          online course taught by Jonas S. This can be 100% used for personal
+          and professional uses as long as the author is credited for the
+          design, Copyright &copy; <a href="#" class="footer_link">yash</a>
         </p>
       </div>
     </div>
@@ -396,15 +432,26 @@
   <div class="popup" id="popup">
     <div class="popup_content">
       <div class="popup_left">
-        <img src="img/nat-8.jpg" alt="Tour Image" class="popup_img">
-        <img src="img/nat-9.jpg" alt="Tour Image" class="popup_img">
+        <img src="img/nat-8.jpg" alt="Tour Image" class="popup_img_1" />
+        <img src="img/nat-9.jpg" alt="Tour Image" class="popup_img_2" />
       </div>
 
       <div class="popup_right">
         <a href="#section_tours" class="popup_close">&times;</a>
-        <h2 class="header-secondary u-margin-bottom-small">Start booking Now</h2>
-        <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read the terms and conditions before booking</h3>
-        <p class="popup_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis harum itaque mollitia quod dolores libero possimus maiores tempora debitis eligendi aperiam, quibusdam ipsum saepe fugit molestias voluptas optio temporibus quasi, Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis harum itaque mollitia.</p>
+        <h2 class="header-secondary u-margin-bottom-small">
+          Start booking Now
+        </h2>
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          Important &ndash; Please read the terms and conditions before
+          booking
+        </h3>
+        <p class="popup_text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis harum
+          itaque mollitia quod dolores libero possimus maiores tempora debitis
+          eligendi aperiam, quibusdam ipsum saepe fugit molestias voluptas
+          optio temporibus quasi, Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Omnis harum itaque mollitia.
+        </p>
         <a href="#" class="btn btn--green">Book now</a>
       </div>
     </div>
